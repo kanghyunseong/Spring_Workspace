@@ -8,9 +8,9 @@ import lombok.RequiredArgsConstructor;
 @Component
 @RequiredArgsConstructor
 public class PasswordEncoder {
-
+	
 	private final BCryptPasswordEncoder passwordEncoder;
-
+	
 	public String encode(String rawPassword) {
 		return passwordEncoder.encode(rawPassword);
 	}
@@ -18,4 +18,5 @@ public class PasswordEncoder {
 	public boolean matches(String rawPassword, String encodedPassword) {
 		return passwordEncoder.matches(rawPassword, encodedPassword);
 	}
+
 }
